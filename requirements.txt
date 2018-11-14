@@ -1,1 +1,1 @@
-click
+click>=7.0
