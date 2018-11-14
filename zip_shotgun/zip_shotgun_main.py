@@ -47,6 +47,7 @@ def zip_shotgun_cli(output_zip_file, directories_count, shell_name, shell_file_p
             logging.info('Opening provided file with shell code: {}'.format(shell_file_path))
             with open(shell_file_path) as provided_shell_file:
                 shell_code = provided_shell_file.read()
+                # TODO Save file extension to use later
 
         if compress:
             logging.info('--compress flag was set. Archive will be compressed using DEFLATE algorithm with a level of 9')
