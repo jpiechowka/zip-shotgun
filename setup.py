@@ -16,7 +16,7 @@ setup(
     url='https://github.com/jpiechowka/zip-shotgun',
     install_requires=['click>=7.0'],
     python_requires='>=3',
-    license='TODO',  # TODO
+    license='GNU General Public License v3.0',
     keywords='todo',  # TODO
     entry_points={
         'console_scripts': [
@@ -34,8 +34,8 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Topic :: Security',
-        'Topic :: Utilities'
-        # TODO add license
+        'Topic :: Utilities',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
     ],
     zip_safe=False
 )
