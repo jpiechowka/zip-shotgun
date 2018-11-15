@@ -1,6 +1,6 @@
 ## ZIP Shotgun
 
-Utility script to test zip file upload (and possible extraction) functionality for vulnerabilities.
+Utility script to test zip file upload functionality (and possible extraction of zip files) for vulnerabilities.
 Idea for this script comes from this post on [Silent Signal Techblog - Compressed File Upload And Command Execution](https://blog.silentsignal.eu/2014/01/31/file-upload-unzip/)
 and from [OWASP - Test Upload of Malicious Files](https://www.owasp.org/index.php/Test_Upload_of_Malicious_Files_%28OTG-BUSLOGIC-009%29)
 

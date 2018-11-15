@@ -9,7 +9,7 @@ setup(
     name='ZIP Shotgun',
     version='1.0.0',
     packages=find_packages(),
-    description='Utility script to test zip file upload (and possible extraction) functionality for vulnerabilities',
+    description='Utility script to test zip file upload functionality (and possible extraction of zip files) for vulnerabilities',
     long_description=readme,
     long_description_content_type='text/markdown',
     author='Janusz Piechowka (https://github.com/jpiechowka)',
