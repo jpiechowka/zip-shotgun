@@ -1,10 +1,10 @@
 ## ZIP Shotgun
 
-TODO Add description
+Utility script to test zip file upload (and possible extraction) functionality for vulnerabilities.
+Idea for this script comes from this post on [Silent Signal Techblog - Compressed File Upload And Command Execution](https://blog.silentsignal.eu/2014/01/31/file-upload-unzip/)
+and from [OWASP - Test Upload of Malicious Files](https://www.owasp.org/index.php/Test_Upload_of_Malicious_Files_%28OTG-BUSLOGIC-009%29)
 
-https://blog.silentsignal.eu/2014/01/31/file-upload-unzip/
-https://www.owasp.org/index.php/Test_Upload_of_Malicious_Files_(OTG-BUSLOGIC-009)
-https://github.com/WhiteWinterWolf/wwwolf-php-webshell
+Default webshell is wwwolf's PHP web shell and all credit for it goes to WhiteWinterWolf. Source is available [HERE](https://github.com/WhiteWinterWolf/wwwolf-php-webshell)
 
 #### Installation
 
