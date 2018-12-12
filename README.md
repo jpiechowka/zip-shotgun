@@ -34,7 +34,7 @@ Options:
                                   ../shell.php and ../../shell.php where
                                   shell.php is the name of the shell you
                                   provided or randomly generated value
-                                  [default: 15]
+                                  [default: 16]
   -n, --shell-name TEXT           Name of the shell inside the generated zip
                                   file (e.g shell.php). If not provided it
                                   will be randomly generated
