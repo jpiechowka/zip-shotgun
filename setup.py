@@ -12,7 +12,7 @@ setup(
     description='Utility script to test zip file upload functionality (and possible extraction of zip files) for vulnerabilities',
     long_description=readme,
     long_description_content_type='text/markdown',
-    author='Janusz Piechowka (https://github.com/jpiechowka)',
+    author='Janusz Piechówka (https://github.com/jpiechowka)',
     url='https://github.com/jpiechowka/zip-shotgun',
     install_requires=['click~=7.0', 'typeguard~=2.2'],
     python_requires='>=3.6',
