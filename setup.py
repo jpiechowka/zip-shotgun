@@ -24,8 +24,9 @@ setup(
         ]
     },
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
-        'Intended Audience :: End Users/Desktop'
+        'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Information Technology',
         'Intended Audience :: System Administrators',
         'Programming Language :: Python :: 3',
@@ -35,7 +36,7 @@ setup(
         'Operating System :: OS Independent',
         'Topic :: Security',
         'Topic :: Utilities',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
     ],
     zip_safe=False
 )
