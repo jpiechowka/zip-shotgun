@@ -3,7 +3,7 @@ import pathlib
 import string
 from random import SystemRandom
 from typing import Tuple
-from zipfile import ZipFile, ZIP_DEFLATED
+from zipfile import ZipFile, ZIP_DEFLATED, ZipInfo
 
 from typeguard import typechecked
 
@@ -48,7 +48,10 @@ def get_user_provided_shell_code_and_extension(provided_shell_file_path: str) ->
 @typechecked(always=True)
 def save_file_to_zip_archive(output_zip_file: ZipFile, file_name_with_extension: str, shell_code_to_write: str, use_compression: bool) -> None:
     logging.info(f'Writing file to the archive: {file_name_with_extension}')
+    logging.info(f'Setting full read/write/execute permissions (chmod 777) for file: {file_name_with_extension}')
+    zip_info = ZipInfo(file_name_with_extension)
+    zip_info.external_attr = 0o777 << 16  # Set permissions - chmod 777
     if use_compression:
-        output_zip_file.writestr(file_name_with_extension, shell_code_to_write, ZIP_DEFLATED, 9)
+        output_zip_file.writestr(zip_info, shell_code_to_write, ZIP_DEFLATED, 9)
     else:  # If --compress flag was not provided only store the files in the archive.
-        output_zip_file.writestr(file_name_with_extension, shell_code_to_write)
+        output_zip_file.writestr(zip_info, shell_code_to_write)

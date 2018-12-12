@@ -56,7 +56,6 @@ def zip_shotgun_cli(output_zip_file, directories_count, shell_name, shell_file_p
             base_directory = '../' * i  # if iteration is 0 it will return empty string
             file_name_in_archive = f'{base_directory}{shell_name}.{file_extension}'
             save_file_to_zip_archive(output_zip, file_name_in_archive, shell_code, compress)
-            # TODO modify file permissions in the archive
 
     logging.info(f'Finished. Try to access shell using {shell_name}.{file_extension} in the URL')
 
