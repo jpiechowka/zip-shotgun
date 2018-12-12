@@ -12,7 +12,7 @@ VERSION = '1.0.0'
 
 HELP_MSG_DIRECTORIES_COUNT = 'Count of how many directories to go back inside the zip file (e.g 3 means that 3 files will be added to the zip: ' \
                              'shell.php, ../shell.php and ../../shell.php where shell.php is the name of the shell you provided or randomly generated value'
-HELP_MSG_SHELL_NAME = 'Name of the shell inside the generated zip file (e.g shell). If not provided it will be randomly generated, Cannot have whitespaces'
+HELP_MSG_SHELL_NAME = 'Name of the shell inside the generated zip file (e.g shell). If not provided it will be randomly generated. Cannot have whitespaces'
 HELP_MSG_SHELL_FILE_PATH = 'A file that contains code for the shell. If this option is not provided ' \
                            'wwwolf (https://github.com/WhiteWinterWolf/wwwolf-php-webshell) php shell will be added instead. ' \
                            'If name is provided it will be added to the zip with the provided name or if not provided the name will be randomly generated.'

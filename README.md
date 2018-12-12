@@ -37,7 +37,7 @@ Options:
                                   [default: 16]
   -n, --shell-name TEXT           Name of the shell inside the generated zip
                                   file (e.g shell). If not provided it will be
-                                  randomly generated, Cannot have whitespaces
+                                  randomly generated. Cannot have whitespaces
   -f, --shell-file-path PATH      A file that contains code for the shell. If
                                   this option is not provided wwwolf
                                   (https://github.com/WhiteWinterWolf/wwwolf-
