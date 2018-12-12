@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as readme_file:
     readme = readme_file.read()
 
 setup(
-    name='ZIP Shotgun',
+    name='zip-shotgun',
     version='1.0.0',
     packages=find_packages(),
     description='Utility script to test zip file upload functionality (and possible extraction of zip files) for vulnerabilities',
