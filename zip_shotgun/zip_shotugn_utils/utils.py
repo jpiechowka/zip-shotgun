@@ -36,7 +36,7 @@ def get_user_provided_shell_code_and_extension(provided_shell_file_path: str) ->
 
     # Get file extension from user provided shell file
     user_provided_file_extension = pathlib.Path(provided_shell_file_path).suffix
-    stripped_user_provided_file_extension = user_provided_file_extension.strip('.')  # Delete "." character from extension. It will be added later
+    stripped_user_provided_file_extension = user_provided_file_extension.lstrip('.')  # Delete "." character from extension. It will be added later
     logging.info(f'Getting file extension from provided shell file for reuse: {stripped_user_provided_file_extension}')
 
     logging.info(f'Opening provided file with shell code: {provided_shell_file_path}')
