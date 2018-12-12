@@ -126,7 +126,7 @@ Options:
     
     ```zip-shotgun -n custom-name --compress archive.zip```
     
-    Name for shell files inside the archive will be set to the one provided by user.
+    Name for shell files inside the archive will be set to the one provided by the user.
     
     Part of the script output
     
