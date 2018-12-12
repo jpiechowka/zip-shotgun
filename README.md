@@ -10,11 +10,11 @@ Default webshell is wwwolf's PHP web shell and all the credit for it goes to Whi
 
 1. Install using Python pip
 
-    NOTE: package is not yet available to be installed from pip repository
-
     ```pip install zip-shotgun --upgrade```
 
 2. Clone git repository and install
+
+    ```git clone https://github.com/jpiechowka/zip-shotgun.git```
 
     Execute from root directory of the cloned repository (where setup.py file is located)
     
