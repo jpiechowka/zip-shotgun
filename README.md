@@ -62,7 +62,7 @@ Options:
     Part of the script output
     
     ```
-    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Opening output zip file: REDACTEDs\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
     12/Dec/2018 Wed 23:13:13 +0100 |  WARNING | Shell name was not provided. Generated random shell name: BCsQOkiN23ur7OUj
     12/Dec/2018 Wed 23:13:13 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
     12/Dec/2018 Wed 23:13:13 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
@@ -84,7 +84,7 @@ Options:
     Part of the script output
     
     ```
-    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Opening output zip file: REDACTEDs\zip-shotgun\archive.zip
+    12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Opening output zip file: REDACTED\zip-shotgun\archive.zip
     12/Dec/2018 Wed 23:16:13 +0100 |  WARNING | Shell name was not provided. Generated random shell name: 6B6NtnZXbXSubDCh
     12/Dec/2018 Wed 23:16:13 +0100 |  WARNING | Shell file was not provided. Using default wwwolf's webshell code
     12/Dec/2018 Wed 23:16:13 +0100 |     INFO | Using default file extension for wwwolf's webshell: php
