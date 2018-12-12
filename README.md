@@ -12,7 +12,7 @@ Default webshell is wwwolf's PHP web shell and all the credit for it goes to Whi
 
     NOTE: package is not yet available to be installed from pip
 
-    ```pip install zip-shotgun```
+    ```pip install zip-shotgun --upgrade```
 
 2. Clone git repository and install
 
