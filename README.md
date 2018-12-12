@@ -4,6 +4,9 @@ Utility script to test zip file upload functionality (and possible extraction of
 Idea for this script comes from this post on [Silent Signal Techblog - Compressed File Upload And Command Execution](https://blog.silentsignal.eu/2014/01/31/file-upload-unzip/)
 and from [OWASP - Test Upload of Malicious Files](https://www.owasp.org/index.php/Test_Upload_of_Malicious_Files_%28OTG-BUSLOGIC-009%29)
 
+This script will create archive which contains files with "../" in filename. When extracting this could cause files to be extracted to preceding directories.
+It can allow attacker to extract shells to directories which can be accessed from web browser.
+
 Default webshell is wwwolf's PHP web shell and all the credit for it goes to WhiteWinterWolf. Source is available [HERE](https://github.com/WhiteWinterWolf/wwwolf-php-webshell)
 
 ### Installation

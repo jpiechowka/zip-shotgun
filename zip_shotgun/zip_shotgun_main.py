@@ -8,7 +8,7 @@ from zip_shotgun.zip_shotugn_utils.utils import get_random_shell_name, get_defau
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 APP_NAME = 'ZIP Shotgun'
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 HELP_MSG_DIRECTORIES_COUNT = 'Count of how many directories to go back inside the zip file (e.g 3 means that 3 files will be added to the zip: ' \
                              'shell.php, ../shell.php and ../../shell.php where shell.php is the name of the shell you provided or randomly generated value'
