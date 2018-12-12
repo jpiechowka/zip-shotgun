@@ -14,7 +14,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Janusz Piechowka (https://github.com/jpiechowka)',
     url='https://github.com/jpiechowka/zip-shotgun',
-    install_requires=['click>=7.0'],
+    install_requires=['click~=7.0', 'typeguard~=2.2'],
     python_requires='>=3',
     license='GNU General Public License v3.0',
     keywords='security pentest hacking zip',
