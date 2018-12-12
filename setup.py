@@ -7,7 +7,7 @@ with open('README.md', 'r', encoding='utf-8') as readme_file:
 
 setup(
     name='zip-shotgun',
-    version='1.0.0',
+    version='1.0.1',
     packages=find_packages(),
     description='Utility script to test zip file upload functionality (and possible extraction of zip files) for vulnerabilities',
     long_description=readme,
