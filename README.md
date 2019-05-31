@@ -13,9 +13,9 @@ Default webshell is wwwolf's PHP web shell and all the credit for it goes to Whi
 
 ### Installation
 
-1. Install using Python pip
+1. Install using Python pip (Python 3 required)
 
-    ```pip install zip-shotgun --upgrade```
+    ```pip3 install zip-shotgun --upgrade```
 
 2. Clone git repository and install
 
@@ -23,7 +23,7 @@ Default webshell is wwwolf's PHP web shell and all the credit for it goes to Whi
 
     Execute from root directory of the cloned repository (where setup.py file is located)
     
-    ```pip install . --upgrade```
+    ```pip3 install . --upgrade```
 
 ### Usage and options
 
