@@ -4,7 +4,9 @@ Utility script to test zip file upload functionality (and possible extraction of
 Idea for this script comes from this post on [Silent Signal Techblog - Compressed File Upload And Command Execution](https://blog.silentsignal.eu/2014/01/31/file-upload-unzip/)
 and from [OWASP - Test Upload of Malicious Files](https://www.owasp.org/index.php/Test_Upload_of_Malicious_Files_%28OTG-BUSLOGIC-009%29)
 
-[Snyk.io](https://snyk.io/) has got great report how this works: [Zip Slip vulnerability](https://snyk.io/research/zip-slip-vulnerability) and a GitHub repository with vulnerable libraries in different languages: [Snyk.io Zip Slip github repo](https://github.com/snyk/zip-slip-vulnerability)
+[Snyk.io](https://snyk.io/) has got report how this works: [Zip Slip vulnerability](https://snyk.io/research/zip-slip-vulnerability) and a GitHub repository with vulnerable libraries in different languages: [Snyk.io Zip Slip github repo](https://github.com/snyk/zip-slip-vulnerability)
+
+There is also a great video from [LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w) shedding some light on [Zip Slip](https://snyk.io/research/zip-slip-vulnerability) and [Zipperdown](https://zipperdown.org) vulnerabilities: [Critical .zip vulnerabilities? - Zip Slip and ZipperDown](https://youtu.be/Ry_yb5Oipq0)
 
 This script will create archive which contains files with "../" in filename. When extracting this could cause files to be extracted to preceding directories.
 It can allow attacker to extract shells to directories which can be accessed from web browser.
